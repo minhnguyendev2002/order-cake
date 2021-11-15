@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TinderCard  from "./CardSwitch"; 
+import * as TinderCard from "./CardSwitch";
 import ButtonActions from './ButtonActions';
 import $ from 'jquery';
 const db = [
