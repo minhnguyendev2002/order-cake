@@ -1,0 +1,319 @@
+html, body, #root {
+  overflow: hidden;
+  background-color:#fdf1f2;
+}
+::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+    background-color: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent ;
+  border-radius: 90px; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {  
+    background-color: transparent;
+  border-radius: 90px; 
+}
+.react-calendar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+button {
+  border: 0;
+  outline: 0;
+}
+.react-calendar__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.react-calendar__navigation .react-calendar__navigation__prev2-button, .react-calendar__navigation .react-calendar__navigation__next2-button, .react-calendar__navigation .react-calendar__navigation__prev-button, .react-calendar__navigation .react-calendar__navigation__next-button {
+  background: var(--second-color-content);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.react-calendar__navigation .react-calendar__navigation__label {
+  background: var(--second-color-content);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+.react-calendar__month-view__weekdays {
+  background: var(--second-color-content);
+  color: var(--main-color-content);
+  padding: 5px 5px 9px;
+  border-radius: 10px 10px 0 0;
+}
+.react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday {
+  display: flex;
+  justify-content: center;
+}
+.react-calendar__month-view__weekdays abbr[data-original-title], .react-calendar__month-view__weekdays abbr[title] {
+  text-decoration: none;
+}
+.react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday:nth-child(6) > abbr, .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday:nth-child(7) > abbr {
+  color: red;
+}
+.react-calendar__month-view__days {
+  background: #efefef;
+  padding-top: 5px;
+  border-radius: 0 0 10px 10px;
+}
+.react-calendar__month-view__days button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend {
+  color: red;
+}
+.react-calendar__month-view__days button.react-calendar__tile.react-calendar__month-view__days__day {
+  height: 49.03px;
+}
+.react-calendar__month-view__days button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day {
+  background: var(--second-color-content);
+  border-radius: 50%;
+}
+.react-calendar__month-view__days button:nth-child(35) {
+  border-radius: 0 0 10px 0;
+}
+.react-calendar__month-view__days button:nth-child(29) {
+  border-radius: 0 0 0 10px;
+}
+.button-actions-steps {
+  position: absolute;
+  bottom: 5vh;
+}
+.button-actions-steps button {
+  font-size: 18px !important;
+  background: var(--second-color-content) !important;
+}
+.button-actions-steps .Mui-disabled {
+  background: #efefef !important;
+}
+.react-timekeeper {
+  width: 100% !important;
+}
+.react-timekeeper .react-timekeeper__top-bar {
+  display: flex;
+  justify-content: center;
+}
+.react-timekeeper .react-timekeeper__tb-hour--active, .react-timekeeper .react-timekeeper__tb-minute--active {
+  color: var(--second-color-content) !important;
+}
+.react-timekeeper__hand-circle-outer, .react-timekeeper__hand-intermediate-circle {
+  fill: var(--second-color-content) !important;
+}
+.react-timekeeper__clock-hand {
+  stroke: var(--second-color-content) !important;
+}
+.react-timekeeper__clock-hours span, .react-timekeeper__clock-minutes span, .react-timekeeper__clock-wrapper > div > button {
+  color: var(--main-color-content) !important;
+}
+.react-timekeeper, .react-timekeeper__top-bar, .react-timekeeper__clock-wrapper {
+  border-radius: 15px !important;
+  box-shadow: none !important;
+}
+.react-timekeeper__meridiem--active {
+  background: var(--second-color-content) !important;
+  opacity: 0.8;
+}
+.react-tel-input .form-control {
+  width: 100% !important;
+  font-size: 20px;
+  height: 50px;
+  font-family: 'Exo 2';
+  border: none;
+  border-radius: 10px;
+}
+.react-tel-input .flag-dropdown {
+  background: transparent !important;
+  border: none !important;
+  border-right: 1px solid #f6c13f 38 !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+.form-options-order {
+  background: #f6c13f 38;
+  padding: 10px;
+  border-radius: 10px;
+}
+.form-options-order input, .form-options-order textarea {
+  border-radius: 8px;
+  border: none;
+  padding:10px 15px 10px;
+  resize: none;
+}
+.form-options-order textarea {
+  min-height: 120px;
+}
+.swipe {
+  position: absolute;
+}
+.card {
+  position: relative;
+  background-color: #fff;
+  width: 90vw;
+  height: calc(75vh - 110px);
+  background-size: cover;
+  background-position: center;
+  border: none !important;
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px !important;
+
+}
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+.card h3 {
+  position: absolute;
+  bottom: 0px;
+  margin: 0;
+  color: #fff;
+  background: var(--second-color-content);
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 0 15px;
+}
+.infoText {
+  width: 100%;
+  height: 28px;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  animation-name: popup;
+  animation-duration: 800ms;
+}
+.buttons {
+  margin: 20px;
+  display: flex;
+}
+.buttons button {
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  background-color: #9198e5;
+  transition: 200ms;
+  margin: 0 10px;
+  font-weight: bolder;
+  width: 160px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.buttons button:hover {
+  transform: scale(1.05);
+}
+@keyframes popup {
+  0% {
+    transform: scale(1, 1);
+ }
+  10% {
+    transform: scale(1.1, 1.1);
+ }
+  30% {
+    transform: scale(0.9, 0.9);
+ }
+  50% {
+    transform: scale(1, 1);
+ }
+  57% {
+    transform: scale(1, 1);
+ }
+  64% {
+    transform: scale(1, 1);
+ }
+  100% {
+    transform: scale(1, 1);
+ }
+}
+@media only screen and (max-width: 620px) {
+  .logo img {
+    width: 80px;
+    height: 80px;
+    left: 0;
+ }
+}
+.swipeButtons {
+  position: fixed;
+  bottom: 4vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.swipeButtons .MuiIconButton-root {
+  background-color: white;
+}
+button.MuiButtonBase-root.MuiIconButton-root.swipeButtons_download {
+  color: #76e2b3;  
+  padding: 3vw; 
+}
+button.MuiButtonBase-root.MuiIconButton-root.swipeButtons_buy {
+  color: var(--second-color-content);
+  padding: 3vw;
+}
+button.MuiButtonBase-root.MuiIconButton-root.swipeButtons_view_infor {
+  color: #62b4f9;
+  padding: 3vw;
+}
+button.buy_cake {
+  background-color: #fff;
+  border-radius: 50%;
+  color: #f5b748;
+  padding: 3vw;
+  box-shadow:10px 10px 15px rgb(0 0 0 / 20%), -10px -10px 15px rgb(255 255 255 / 50%), inset 5px 5px 5px rgb(255 255 255 / 50%), inset -5px -5px 5px rgb(0 0 0 / 10%);
+}
+.MuiButton-contained {
+  margin-left: 20px !important;
+}
+.flip_toSee {
+  transform: rotateY(180deg);
+}
+.content_card_infor { 
+  padding: 15px;
+  background: var(--second-color-content);
+  border-radius: 20px;
+  height: 100%;
+  border: none;
+  display:none;
+  transform:rotateY(180deg)
+}
+.content_card_infor h3 {
+  position: initial;
+  color: var(--main-color-content);
+}
+.content_card_infor ul {
+  padding:0
+}
+.content_card_infor ul li {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content_card_infor ul li p, .content_card_infor ul li span { 
+  font-size: 17px;
+  color: var(--bs-body-color);
+}
+.MuiBox-root {
+  width: 90vw;
+}
+.MuiButton-contained, .MuiButton-outlined {
+  padding:5px 20px !important;
+  font-size:18px !important;
+  float:right;
+}
+.preview_order img {
+  width: 100%;
+  border-radius: 12px;
+}

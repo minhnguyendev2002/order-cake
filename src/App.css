@@ -1,0 +1,566 @@
+ 
+:root {
+    --main-color-content: #3d251c;
+    --second-color-content:#f6c13f;
+    --second-color-bold-content:#ffb500;
+    --third-color-content: #fff;
+    --four-color-content:#bbbaba;
+    --firth-color-main:#cc2a32;
+    --six-color-content: #000;
+    --button-color-disable:#e0e0e0
+  }
+  html {
+    height: 100%;
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; 
+    scroll-behavior: smooth;  
+  }
+  input:focus, textarea:focus, select:focus{
+    outline: none !important;
+  }
+   
+  .effect-input~label, .input-card~label {
+      position: absolute;
+      left: 0; 
+      top: 9px;
+      color: #aaa;
+      transition: 0.3s;
+      z-index: 1;
+      letter-spacing: 0.5px;
+  }
+  .input-card-debit + label:after, #name-card-debit + label:after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      top: 100%;
+      left: 50%;
+      margin-left: -3px;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-top: 3px solid rgba(122, 184, 147, 0);
+      transition: all 0.3s ease-in-out;
+  }
+  .input-card-debit:focus, .input-card-debit:active , #name-card-debit:focus, #name-card-debit:active, #date-card-debit:focus, #date-card-debit:active, #code-security-card-debit:focus, #code-security-card-debit:active {
+      color: var(--main-color-content);
+      text-indent: 0;
+      background: #fff;
+      border: 1px solid;
+      border-radius: 5.5px;
+  }
+  .input-card-debit:focus::-webkit-input-placeholder, .input-card-debit:active::-webkit-input-placeholder {
+      color: #aaa;
+  }
+  .input-card-debit:focus + label, .input-card-debit:active + label {
+      color: #fff;
+      text-shadow: 0 1px 0 rgba(74, 19, 19, 0.4);
+      background:  var(--main-color-content);
+      transform: translateY(-40px);
+      padding: 3px 15px;
+  }
+  .input-card-debit:focus + label:after, .input-card-debit:active + label:after {
+      border-top: 4px solid var(--main-color-content);
+  }
+  
+  .effect-input:focus~.focus-border,.input-card:focus~.focus-border,
+  .has-content.effect-input~.focus-border, .has-content.input-card~.focus-border {
+      width: 100%;
+      transition: 0.4s;
+  }
+  
+  .effect-input:focus~label,.input-card,
+  .has-content.effect-input~label , .has-content.input-card~label {
+      top: -16px;
+      font-size: 12px;
+      color: var(--main-color-content);
+      transition: 0.3s;
+  } 
+  .col-12 label.text-area {
+      left: 25px;
+  }
+  textarea.effect-input { 
+      height: 85px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 100%;
+      margin: 0 10px;
+      resize: none;
+      z-index: 2;
+      padding: 10px;
+  }
+  body {
+    font-family: 'Exo 2', sans-serif;
+    overflow-x: hidden;
+    user-select: none;
+  }
+  .snow {
+    position: fixed;
+    inset: 0 ;
+    z-index:3;
+  }
+  p {
+    margin: 0;
+    color: #0202028a;
+  }
+  .logo h1 {
+    font-family: 'Racing Sans One', cursive;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    user-select: none;
+  }
+  ::selection {
+    color:  var(--main-color-content) ;
+    background-color: var(--second-color-content) ;
+  }
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+      background-color: #fff;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+      background-color: #edeae8 ;
+    border-radius: 90px; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {  
+      background-color: var(--second-color-content) ;
+    border-radius: 90px; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--second-color-content) ; 
+  }textarea:focus, input:focus{
+    outline: none;
+  }
+  h2.tittle {
+    font-size: 2.2rem;
+    letter-spacing: -0.025em;
+    padding-bottom: 22px; 
+    text-align: center; 
+    position: relative;
+    margin: 0 auto 35px;
+    color: var(--main-color-content)
+  }
+  h2.tittle:before{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    border-bottom: 2px solid var(--second-color-content) ;
+    transform: translateX(-50%);
+  }
+  a {
+    transition: all .3s ease-in-out;
+  }
+  a:hover {
+    text-decoration: none;
+  }  
+  svg {
+    cursor: pointer;
+    transition: all .2s ease-in-out; 
+  } 
+  button:focus {
+    outline: 0;
+  } 
+  .row {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  @keyframes zoomOut {
+    from { 
+       opacity: 0;
+        transform: scale(0);
+    } to {
+      opacity: 1;
+        transform: scale(1);
+    }
+  } 
+  @keyframes fadeInDown {
+    0% {
+       opacity: 1;
+       transform: translateY(-100%);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+  } 
+  @keyframes backInLeft {
+    0% {
+        transform: scale(.8) translate(-100%, 0);
+        opacity: 0;
+    }
+    20% {
+        opacity: .3;
+    }
+    70% {
+        transform: scale(.8) translate(0, 0);
+        opacity: .3;
+    }
+    100% {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+    }
+  }
+  @keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+  
+    20% {
+        opacity: .5;
+    }
+  
+    60% {
+        transform: scale(1);
+        opacity: 1;
+    }
+  
+    80% {
+        transform: scale(.8);
+    }
+  
+    100% {
+        transform: scale(1);
+    }
+  }
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+  }
+  section.customerSay {
+    padding: 50px 0 106px;
+    background-color: #6c757d14;
+  }  
+  .skip-link:focus {
+    top: 0;
+  }
+  .lay-out {
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    background-color: #fff; 
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; 
+  }
+  .text-right {
+    text-align: right;
+  }
+  ul {
+    list-style-type: none;
+  } 
+  .pd-30  {
+    padding: 30px 0;
+  }
+  .pad-30-10 {
+    padding: 20px 10px;
+  }
+  .pd-10 {
+    padding: 0 10%;
+  } 
+  button.button.form-account, button.see-more, button.fillter-product-sidebar-close, button.countinue-payment,button.see-more-link , button.search-now {
+    margin: 30px auto;
+    padding: 5px 20px; 
+    font-size: 1rem;
+    font-size: .8rem;
+    font-weight: unset;
+    letter-spacing: .9px;
+    display: block;
+  }
+  div[class*='flex'] { 
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    row-gap: 30px; 
+  }
+  div[class*='col-sm'] { 
+    padding :0; 
+  }
+  div[class*='choose'] { 
+    cursor: pointer;
+  } 
+  main {
+    padding: 108px 0px 0; 
+  }
+  .flex-center { 
+    justify-content:center;
+    align-items: center;
+  }
+  .flex-space { 
+    justify-content: space-between;
+    display: flex;
+  }
+  .flex-evenly { 
+    justify-content: space-evenly;
+  }
+  .flex-start { 
+    align-items: flex-start !important;
+  }
+  .subcribe {
+    flex-direction: column !important;
+    padding: 80px 0;
+    background-color: #e8eaec;
+  }
+  .subcribe .MuiFormControl-root label {
+      color: #6B6B6B !important; 
+  }
+  .disabledButton,.disabledButton:hover {
+    background-color: #c2c2c2 !important;
+    border: none !important;
+    color: #F5F5F5 !important;
+  } 
+   
+  .cobra {
+    cursor: pointer;
+  }
+  iframe#\:1\.container {
+    display: none;
+  }
+  .goog-te-gadget { 
+    display: none;
+  }
+  div#goog-gt-tt, div.skiptranslate,.goog-logo-link, .goog-logo-link:link, .goog-logo-link:visited, .goog-logo-link:hover, .goog-logo-link:active  {
+    display: none !important;
+    user-select: none !important; 
+  }
+  .goog-text-hightlight {
+    background-color: var(--second-color-content) !important;
+  }  
+  .shop-padding { 
+    position: relative ;
+    margin-top: 117px;
+  }
+  .list-payment ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .list-payment ul > li {
+    width: 50px;
+    background: #fff;
+    margin: 0 5px;
+    padding: 0 5px;
+    border-radius: 10px;
+  }
+  .list-payment svg {
+    height: 35px;
+  }
+  ul.media-button {
+      padding: 18px 0 0;
+      display: flex;
+      justify-content: center;
+  }
+  li.media-button {
+      list-style: none;
+      margin: 0 10px;
+  }
+  a.media-button,
+  div.media-button,
+  div.step-icon {
+      width: 40px;
+      height: 40px;
+      display: block;
+      text-align: center;
+      border-radius: 50%;
+      padding: 4px;
+      box-sizing: border-box;
+      text-decoration: none;
+      background: linear-gradient(0deg, #ddd, #fff);
+      transition: 0.3s;
+  }
+  a.media-button:hover,
+  div.media-button:hover,
+  div.step-icon:hover {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+  }
+  a.media-button svg,
+  div.step-icon svg {
+      display: block;
+      background: linear-gradient(0deg, #fff, #ddd);
+      border-radius: 50%;
+      line-height: calc(45px - 12px);
+      font-size: 16px;
+      color: var(--second-color-bold-content);
+      transition: 0.3s;
+      width: 30px;
+      height: 30px;
+      padding: 6px;
+  }
+  
+  .form__radio {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .form__radio li {
+    position: relative;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .form__radio li:last-child {
+    margin-right: 0;
+  }
+  .form__radio span {
+    font-size: 14px;
+    color: #242525;
+  } 
+  .form__radio input:not(:checked),
+  .form__radio input:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  .form__radio label {
+    display: block;
+    margin: 0;
+    position: relative;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 14px;
+    color: #242525;
+    line-height: 24px;
+    padding-left: 25px;
+    transition: 0.5s;
+  } 
+  .form__radio label:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 4px solid #dcdcdc;
+    background-color: transparent;
+    border-radius: 50%;
+    left: 0;
+    top: 4px;
+    transition: 0.5s;
+  } 
+  .form__radio input:checked + label {
+    color: #242525;
+  } 
+  .form__radio input:checked + label:before {
+    border-color: var(--main-color-content);
+  }
+  
+  .mt-80 {
+    margin-top:88px !important;
+  }
+  .minW-140 {
+    min-width: 140px;
+  }
+  .MuiRadio-root {
+    color:var(--second-color-content) !important;
+  }
+  .MuiButton-root{min-width: 0 !important} 
+  .MuiBadge-colorSecondary {background-color:var(--second-color-content) !important} 
+  
+  .sidebar-tab-part-edit {
+    margin-left: 40px;
+    max-height: 216px;
+    max-width: 250px;
+    position: fixed; 
+    top: 145px;
+  } 
+  .sidebar-tab-part-edit li {
+    display: block;
+  }
+  .sidebar-tab-part-edit li>a {
+    cursor:pointer;
+    border-left: 2px solid;
+    line-height: 30px;
+    padding-left: 20px;
+    transition: all .2s ease-in-out;
+  }
+  .sidebar-tab-part-edit li:hover, .sidebar-tab-part-edit li.active , .sidebar-tab-part-edit li >a.active {
+    color:var(--second-color-content);
+  }
+  .MuiButton-outlined,.MuiButton-contained {
+    border-radius: 8px !important;
+    color:var(--second-color-content) !important;
+    border-color:var(--second-color-content) !important;
+    text-transform: capitalize !important;
+  }
+  .MuiButton-contained {
+    background-color: var(--second-color-content) !important;
+    color:#fff !important;
+  }
+  
+  /*--------------------INPUT FORM ---------------------*/
+  .col-5, .col-10 {
+      float: left;
+      padding: 0;
+      margin: 10px auto;
+      position: relative;
+  }  
+  .col-12 {
+      display: flex;
+      padding: 0;
+  }
+  .input-effect {
+      position: relative;
+  }
+  span.message-error, span.message-success{
+      position: absolute;
+      left: 0;
+      bottom: -88%;
+      transform: translate(0%, -50%);
+      font-size: .7rem;
+      width: 100%;
+  }
+  span.message-error{
+      color:red;
+  }
+  span.message-success{ 
+      color:green;
+  }
+  .form input.effect-input , .form input.input-card {
+      color: #333;
+      width: 100%;
+      box-sizing: border-box;
+      letter-spacing: 1px;
+      z-index: 2;
+      position: relative;
+  }
+  
+  .effect-input,.input-card {
+      border: 0;
+      padding: 4px 0;
+      border-bottom: 1px solid #ccc;
+      background-color: transparent;
+  }
+  
+  .effect-input~.focus-border,.input-card~.focus-border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--main-color-content);
+      transition: 0.4s; 
+  }
+  
+  .form h4 {
+      text-align: center;
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 1rem 0 1.5rem;
+  }
